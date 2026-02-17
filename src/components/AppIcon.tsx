@@ -23,7 +23,7 @@ export default function AppIcon({ id, name, icon, gradient, commentCount }: AppI
           </div>
         )}
       </div>
-      <span className="text-white text-[11px] sm:text-xs text-center truncate w-20 drop-shadow-md">
+      <span className="text-white text-[11px] sm:text-xs text-center w-20 leading-tight line-clamp-2 drop-shadow-md">
         {name}
       </span>
     </Link>
