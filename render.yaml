@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: app-hub
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        value: file:./dev.db
+      - key: NODE_ENV
+        value: production

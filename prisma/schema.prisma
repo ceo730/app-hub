@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model App {
+  id          String    @id @default(cuid())
+  name        String
+  description String
+  url         String
+  icon        String
+  gradient    String
+  category    String    @default("Utility")
+  order       Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  comments    Comment[]
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  content   String
+  nickname  String
+  appId     String
+  app       App      @relation(fields: [appId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@index([appId, createdAt])
+}
