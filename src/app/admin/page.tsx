@@ -26,7 +26,7 @@ const GRADIENTS = [
   "from-teal-400 to-green-500",
 ];
 
-const CATEGORIES = ["Utility", "Productivity", "AI", "Media", "Game", "Social", "Education"];
+const CATEGORIES = ["기존사업체", "커머스앱", "기타"];
 
 const emptyForm = {
   name: "",
@@ -34,7 +34,7 @@ const emptyForm = {
   url: "",
   icon: "",
   gradient: GRADIENTS[0],
-  category: "Utility",
+  category: "기존사업체",
   order: 0,
   iconManual: false, // 수동 이모지 입력 여부
 };

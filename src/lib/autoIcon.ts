@@ -64,24 +64,16 @@ const KEYWORD_EMOJIS: [string[], string][] = [
 
 // 카테고리별 기본 이모지
 const CATEGORY_EMOJIS: Record<string, string> = {
-  Utility: "🔧",
-  Productivity: "📋",
-  AI: "🤖",
-  Media: "🎬",
-  Game: "🎮",
-  Social: "👥",
-  Education: "📚",
+  기존사업체: "🏢",
+  커머스앱: "🛒",
+  기타: "📱",
 };
 
 // 카테고리별 추천 그라디언트
 const CATEGORY_GRADIENTS: Record<string, string> = {
-  Utility: "from-blue-400 to-cyan-300",
-  Productivity: "from-green-400 to-emerald-500",
-  AI: "from-purple-500 to-pink-500",
-  Media: "from-yellow-400 to-orange-400",
-  Game: "from-orange-400 to-red-500",
-  Social: "from-pink-400 to-rose-500",
-  Education: "from-indigo-400 to-blue-500",
+  기존사업체: "from-blue-400 to-cyan-300",
+  커머스앱: "from-green-400 to-emerald-500",
+  기타: "from-purple-500 to-pink-500",
 };
 
 function matchKeyword(text: string): string | null {
