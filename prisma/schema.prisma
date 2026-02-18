@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
 }
 
 model App {
@@ -14,7 +14,7 @@ model App {
   url         String
   icon        String
   gradient    String
-  category    String    @default("Utility")
+  category    String    @default("기존사업체")
   order       Int       @default(0)
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt

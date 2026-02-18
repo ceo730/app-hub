@@ -7,6 +7,12 @@ services:
     startCommand: npm start
     envVars:
       - key: DATABASE_URL
-        value: file:./dev.db
+        fromDatabase:
+          name: app-hub-db
+          property: connectionString
       - key: NODE_ENV
         value: production
+
+databases:
+  - name: app-hub-db
+    plan: free
